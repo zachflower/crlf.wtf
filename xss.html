@@ -30,7 +30,6 @@
     var searchParams = new URLSearchParams(url.search);
     var xss = searchParams.get('xss');
     if (xss) {
-      // replace the header with the value from the query string, make sure it is vulnerable to XSS to demonstrate the attack
       document.write('<div style="display: none;">' + xss + '</div>');
     }
   </script>
