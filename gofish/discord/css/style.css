@@ -23,12 +23,18 @@ h1 {
     margin-bottom: 20px;
 }
 
+.Password {
+    margin-bottom: 8px;
+}
+
 .login-form {
     display: flex;
     flex-direction: column;
 }
 
 .login-form input {
+    background-color: rgba(30, 31, 34);
+    color: white;
     padding: 10px;
     margin: 10px 0;
     border: none;
@@ -64,4 +70,23 @@ h1 {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.authBox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to left bottom,#3d4046,#1e1e23);
+    border-radius: 0;
+    overflow: scroll
+}
+
+.required{
+    color: rgba(250, 118, 124, 1)
 }
