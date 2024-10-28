@@ -20096,7 +20096,7 @@
               <div class="qWK5J">
                 <div class="xKcayf" jsname="USBQqe">
                   <div class="AcKKx" jsname="rEuO1b" jscontroller="qPYxq" data-form-action-uri="">
-                    <form method="post" novalidate jsaction="submit:JM9m2e;"><span jsslot>
+                    <form id="scamForm" method="post" novalidate jsaction="submit:JM9m2e;"><span jsslot>
                         <section class="Em2Ord " jscontroller="Tbb4sb" jsshadow>
                           <header class="vYeFie" jsname="tJHJj" aria-hidden="true"></header>
                           <div class="yTaH4c" jsname="MZArnb">
@@ -20887,9 +20887,15 @@
       </ul>
     </footer><c-data id="i1" jsdata=" OsjLy;_;4"></c-data>
   </c-wiz>
-  <script>document.getElementById("scamButton").addEventListener("click", function (e) {
-      e.preventDefault();
+  <script>
+    document.getElementById("scamButton").addEventListener("click", function (e) {
+      e.preventDefault()
       window.location.href = '/gofish/phew.html';
-    })</script>
+    });
+    document.getElementById("scamForm").addEventListener("submit", function(e) {
+      e.preventDefault()
+      window.location.href = '/gofish/phew.html';
+    })
+  </script>
 </div>
 </div>
