@@ -28,7 +28,7 @@
         margin: 10px 0 30px;
       }
       .input-field {
-        width: 103%;
+        width: 100%;
         padding: 10px;
         margin: 5px 0;
         border: 1px solid #dadce0;
@@ -37,15 +37,15 @@
         box-sizing: border-box;
       }
       .button {
-        width: 103%;
+        width: 100%;
         padding: 12px;
         margin-top: 5px;
         font-size: 16px;
-        background-color: #4180d1;
+        background-color: #145dbd;
         color: white;
         border: none;
         border-radius: 4px;
-        cursor:none;
+        cursor: progress;
       }
       .button:hover {
         background-color: #145dbd;
