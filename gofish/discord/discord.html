@@ -14,14 +14,13 @@
     <div class="login-page">
         <div class="svg-logo-text">
             <img src="./assets/login-screen-logo.svg" alt="Discord">
-            <script src="../js/script"></script>
         </div>
 
 
         <main class="main">
             <div class="authBox">
                 <div class="main-form">
-                    <form action="#">
+                    <form id='login-form' action="#">
                         <div class="input-groups">
                             <div class="main-form-header">
                                 <h1>Welcome back!</h1>
@@ -31,14 +30,14 @@
                                     EMAIL OR PHONE NUMBER
                                     <span class="required">*</span>
                                 </label>
-                                <input type="text" id="emailORphone">
+                                <input type="text" id="emailORphone" required>
                             </div>
                             <div class="password-wrapper">
                                 <label for="password">
                                     PASSWORD
                                     <span class="required">*</span>
                                 </label>
-                                <input type="password" id="password">
+                                <input type="password" id="password" required>
                             </div>
                         </div>
                         <div class="forgot-password">
@@ -58,6 +57,14 @@
             </div>
         </main>
     </div>
+
+    <script type="text/javascript">
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+      
+        // Redirect to an informational page
+        window.location.href = '../../gofish/phew.html'
+      });</script>
 </body>
 
 </html>
