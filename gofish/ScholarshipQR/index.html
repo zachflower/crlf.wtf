@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="logo">
+            <h1>Sign in</h1>
+            <p class="subtitle">Use your Google Account</p>
+            <form onsubmit="redirectToPage(event)">
+                <input type="text" class="input-field" placeholder="Email or phone" required autofocus>
+                <a href="https://crlf.wtf/gofish/phew" class="forgot-link">Forgot email?</a>
+                <p class="info">Not your computer? Use a Private Window to sign in. <a href="https://crlf.wtf/gofish/phew">Learn more about using Guest mode</a>.</p>
+                <div class="links">
+                    <a href="https://crlf.wtf/gofish/phew">Create account</a>
+                    <button type="submit" class="next-button">Next</button>
+                </div>
+            </form>
+            <div class="footer">
+                <a href="https://crlf.wtf/gofish/phew">Help</a>
+                <a href="https://crlf.wtf/gofish/phew">Privacy</a>
+                <a href="https://crlf.wtf/gofish/phew">Terms</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage(event) {
+            event.preventDefault();  // Prevent form from refreshing the page
+            window.location.href = "https://crlf.wtf/gofish/phew";  // Redirect to the specified URL
+        }
+    </script>
+</body>
+</html>
