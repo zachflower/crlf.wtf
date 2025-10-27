@@ -11,7 +11,7 @@
     <main class="flex align-items-center justify-content-center">
         <section id="mobile" class="flex">
         </section>
-        <section id="auth" class="flex direction-column">
+        <section id="login-form" class="flex direction-column">
             <div class="panel login flex direction-column">
                 <h1 title="Instagram" class="flex justify-content-center">
                     <img src="./img//instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
@@ -23,7 +23,7 @@
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" placeholder="Password" />
 
-                    <button type="button">Enter</button>
+                    <button type="submit">Enter</button>
                 </form>
                 <div class="flex separator align-items-center">
                     <span></span>
@@ -67,5 +67,18 @@
         </ul>
         <p class="copyright">© 2020 Instagram by Facebook</p>
     </footer>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log("What do you call a fish with no eyes? Fsh!");
+		});
+		
+		
+		document.getElementById('login-form').addEventListener('submit', function (event) {
+			event.preventDefault();
+
+			// Redirect to an informational page
+			window.location.href = 'phew.html';
+		});
+	</script
 </body>
 </html>
