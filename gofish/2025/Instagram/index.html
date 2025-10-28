@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SnapLogin - Awareness Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 40px 30px;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 28px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: bold;
+      color: #262626;
+      margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      background-color: #fafafa;
+    }
+    button.login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #3897f0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .or-separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .or-separator hr {
+      flex: 1;
+      border: none;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+    .or-separator span {
+      margin: 0 10px;
+      font-size: 12px;
+      color: #8e8e8e;
+      font-weight: 600;
+    }
+
+    .facebook-login {
+      color: #385185;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: not-allowed;
+      user-select: none;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #999;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">Instagram</div>
+    <form onsubmit="handleLogin(event)">
+      <input type="text" placeholder="Phone number, username, or email" required />
+      <input type="password" placeholder="Password" required />
+      <button class="login-btn" type="submit">Log In</button>
+    </form>
+
+    <div class="or-separator">
+      <hr><span>OR</span><hr>
+    </div>
+
+    <div class="facebook-login">Log in with Facebook</div>
+
+    <div class="disclaimer">
+       Instagram<br>
+       Meta
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const username = event.target[0].value;
+      const password = event.target[1].value;
+      alert(`Captured (Simulated):\nUsername: ${username}\nPassword: ${password}`);
+    }
+  </script>
+</body>
+</html>
