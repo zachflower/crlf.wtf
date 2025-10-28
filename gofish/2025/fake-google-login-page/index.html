@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-g">
+    <!-- Fixed this meta tag to be a proper viewport tag -->
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Roboto font globally */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        /* Custom focus styles to match Google's blue outline */
+        .form-input:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 1px #1a73e8;
+            outline: none;
+        }
+        
+        /* Custom styles for the "floating" label */
+        .form-input-container {
+            position: relative;
+        }
+        
+        .form-label {
+            position: absolute;
+            top: 1.35rem;
+            left: 1rem;
+            color: #5f6368;
+            pointer-events: none;
+            transition: all 0.2s ease-out;
+            transform-origin: left top;
+        }
+        
+        .form-input:focus + .form-label,
+        .form-input:not(:placeholder-shown) + .form-label {
+            transform: translateY(-0.95rem) scale(0.75);
+            color: #1a73e8;
+            background-color: #fff;
+            padding: 0 0.25rem;
+            left: 0.75rem;
+            top: 0.5rem; /* Adjust to sit on top of the border */
+        }
+
+        .form-input:not(:placeholder-shown):not(:focus) + .form-label {
+             color: #5f6368;
+        }
+        
+        .form-input::placeholder {
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#202124] flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main Login Card -->
+    <div class="border border-gray-300 rounded-lg p-8 sm:p-10 w-full max-w-md">
+        
+        <!-- Header: Google Logo and Title (Shared) -->
+        <header class="text-center mb-8">
+            <!-- Your img tag -->
+            <img src="googielogo.png" width="40" height="40" class="mx-auto block" alt="Logo">
+            <h1 id="main-title" class="text-2xl mt-4">Sign in</h1>
+            <p id="main-subtitle" class="text-base mt-3">Use your Google Account</p>
+        </header>
+
+        <!-- Form Area -->
+        <main>
+            <!-- Note: ID changed to 'login-form' and onsubmit removed -->
+            <form id="login-form" action="#" method="post">
+                
+                <!-- ====== STEP 1: EMAIL ====== -->
+                <div id="email-step">
+                    <!-- Email or phone input -->
+                    <div class="form-input-container mb-2">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-input w-full px-4 py-5 border border-gray-300 rounded-md peer h-14"
+                            placeholder="Email or phone" 
+                            aria-label="Email or phone"
+                            autofocus
+                        >
+                        <label for="email" class="form-label">Email or phone</label>
+                    </div>
+                    
+                    <!-- Forgot email link -->
+                    <div>
+                        <button type="button" class="text-sm font-medium text-[#1a73e8] hover:bg-blue-50 p-2 -m-2 rounded-md">
+                            Forgot email?
+                        </button>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center mt-8">
+                        <!-- Create account button -->
+                        <button type="button" class="text-sm font-medium text-[#1a73e8] hover:bg-blue-50 px-3 py-2 -ml-3 rounded-md order-2 sm:order-1 mt-4 sm:mt-0">
+                            Create account
+                        </button>
+                        
+                        <!-- Next button (triggers JS) -->
+                        <button id="next-btn" type="button" class="bg-[#1a73e8] text-white text-sm font-medium py-3 px-6 rounded-md hover:bg-[#1b66c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a73e8] order-1 sm:order-2 w-full sm:w-auto">
+                            Next 
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ====== STEP 2: PASSWORD (Hidden by default) ====== -->
+                <div id="password-step" class="hidden">
+                    
+                    <!-- Back button and Email Display -->
+                    <div class="flex items-center mb-4 relative">
+                        <!-- Back button -->
+                        <button type="button" id="back-btn" class="p-2 rounded-full hover:bg-gray-100 absolute -left-2">
+                            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <!-- Email pill -->
+                        <div class="flex-grow text-center">
+                           <span id="email-display" class="text-sm font-medium border border-gray-300 rounded-full px-4 py-2">
+                                user@example.com
+                           </span>
+                        </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-input-container mb-2 mt-6">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            class="form-input w-full px-4 py-5 border border-gray-300 rounded-md peer h-14"
+                            placeholder="Enter your password" 
+                            aria-label="Enter your password"
+                        >
+                        <label for="password" class="form-label">Enter your password</label>
+                    </div>
+
+                    <!-- Show password checkbox -->
+                    <div class="mt-4">
+                        <label class="flex items-center text-sm cursor-pointer">
+                            <input type="checkbox" id="show-password" class="form-checkbox h-4 w-4 text-[#1a73e8] border-gray-300 rounded focus:ring-[#1a73e8]">
+                            <span class="ml-2 text-[#202124]">Show password</span>
+                        </label>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex justify-end items-center mt-8">
+                        <!-- Final Next button (submits form) -->
+                        <button type="submit" class="bg-[#1a73e8] text-white text-sm font-medium py-3 px-6 rounded-md hover:bg-[#1b66c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a73e8] w-full sm:w-auto">
+                            Next 
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+    
+    <!-- Footer (unchanged) -->
+    <footer class="absolute bottom-4 w-full max-w-md mx-auto">
+        <div class="flex justify-between items-center text-xs text-[#5f6368]">
+            <select aria-label="Change language" class="bg-transparent p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+                <option value="en-US">English (United States)</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <!-- Add more languages as needed -->
+            </select>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:underline">Help</a>
+                <a href="#" class="hover:underline">Privacy</a>
+                <a href="#" class="hover:underline">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for multi-step logic -->
+    <script>
+        // Get all the elements we need
+        const emailStep = document.getElementById('email-step');
+        const passwordStep = document.getElementById('password-step');
+        
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        
+        const nextToPasswordBtn = document.getElementById('next-btn');
+        const backToEmailBtn = document.getElementById('back-btn');
+        
+        const emailDisplay = document.getElementById('email-display');
+        const showPasswordToggle = document.getElementById('show-password');
+
+        const mainTitle = document.getElementById('main-title');
+        const mainSubtitle = document.getElementById('main-subtitle');
+
+        // 1. Go from Email -> Password
+        nextToPasswordBtn.addEventListener('click', () => {
+            const email = emailInput.value;
+            // Basic validation: just check if it's not empty
+            if (email) {
+                emailDisplay.textContent = email; // Update the pill
+                
+                emailStep.classList.add('hidden');
+                passwordStep.classList.remove('hidden');
+                
+                // Update header text
+                mainTitle.textContent = 'Welcome';
+                mainSubtitle.classList.add('hidden'); // Hide subtitle
+
+                passwordInput.focus(); // Focus password field
+            } else {
+                // Optional: Add error handling (e.g., shake, red border)
+                emailInput.focus();
+            }
+        });
+
+        // 2. Go from Password -> Email
+        backToEmailBtn.addEventListener('click', () => {
+            passwordStep.classList.add('hidden');
+            emailStep.classList.remove('hidden');
+
+            // Restore header text
+            mainTitle.textContent = 'Sign in';
+            mainSubtitle.classList.remove('hidden'); // Show subtitle
+            
+            emailInput.focus(); // Focus email field
+        });
+
+        // 3. Show/Hide Password
+        showPasswordToggle.addEventListener('change', () => {
+            if (showPasswordToggle.checked) {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
+
+        // 4. Final Form Submission (using user's provided code)
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+          event.preventDefault();
+        
+          // Redirect to an informational page
+          window.location.href = 'phew.html';
+        });
+    </script>
+
+</body>
+</html>
+
