@@ -754,10 +754,10 @@
                 <div>
                     <p class="web-login-footer"> <wrap>By signing in, you acknowledge receipt of, review of, and agreement
                         to
-                        <span>Chick-fel-A's Terms and conditions of use including the arbitration of certain claims, as well as receipt
-                        of Chick-fel-A’s Privacy Policy
+                        <span>Chick-fil-A's Terms and conditions of use including the arbitration of certain claims, as well as receipt
+                        of Chick-fil-A’s Privacy Policy
                         and
-                        Calefornia
+                        California
                                 Privacy
                                 Policy</a>
                         </span>
@@ -775,7 +775,12 @@
         </div>
     </main>
 
-    
+    <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // stops the form from submitting
+        window.location.href = '../phew.html'; // redirect to phew.html
+    });
+    </script>
 
 </script>
 </body>
