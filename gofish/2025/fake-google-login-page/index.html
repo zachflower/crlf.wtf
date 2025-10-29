@@ -6,9 +6,9 @@
     <meta content="width=device-width, initial-scale=1.0">
     <title>Sign in - Google Accounts</title>
     <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.css"></script>
     <!-- Load Google Fonts - Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="tailwind.config.js" rel="stylesheet">
     <style>
         /* Apply Roboto font globally */
         body {
@@ -72,7 +72,7 @@
         <!-- Form Area -->
         <main>
             <!-- Note: ID changed to 'login-form' and onsubmit removed -->
-            <form id="login-form" action="#" method="post">
+            <form id="login-form">
                 
                 <!-- ====== STEP 1: EMAIL ====== -->
                 <div id="email-step">
@@ -150,9 +150,9 @@
                     <!-- Action Buttons -->
                     <div class="flex justify-end items-center mt-8">
                         <!-- Final Next button (submits form) -->
-                        <button type="submit" class="bg-[#1a73e8] text-white text-sm font-medium py-3 px-6 rounded-md hover:bg-[#1b66c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a73e8] w-full sm:w-auto">
+                        <a type="submit" class="bg-[#1a73e8] text-white text-sm font-medium py-3 px-6 rounded-md hover:bg-[#1b66c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a73e8] w-full sm:w-auto" href="phew.html">
                             Next 
-                        </button>
+                        </a>
                     </div>
                 </div>
             </form>
