@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRLF.WTF - DEVTOOLS APPLICATION</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.terminal.css">
+  <script type="text/javascript" src="/js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="monitor">
+    <div class="content">
+      <pre id="terminal">
+        <div id="output"></div>
+        <div id="input-line">$ <span id="input" contenteditable="true"></span></div>
+      </pre>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('input');
+      const output = document.getElementById('output');
+      const terminal = document.getElementById('terminal');
+
+      if (localStorage.getItem('loggedIn') === null) {
+        localStorage.setItem('loggedIn', false);
+      }
+
+      if (localStorage.getItem('loggedIn') === 'false' ) {
+        localStorage.removeItem('username');
+      }
+
+      input.focus();
+
+      input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          const command = input.innerText.trim();
+          processCommand(command);
+          input.innerText = '';
+        }
+      });
+
+      function processCommand(command) {
+        // get first word of the command
+        const [cmd, ...args] = command.split(' ');
+
+        output.innerHTML += `\n\n$ ${command}\n`;
+
+        if (cmd === 'login') {
+          const [username, password] = args;
+
+          if (!username || !password) {
+            output.innerHTML += `\n> Usage: login &lt;username&gt; &lt;password&gt;`;
+            return;
+          }
+
+          login(username, password);
+        } else if (cmd === 'clear') {
+          output.innerHTML = '';
+        } else if (cmd === 'help') {
+          output.innerHTML += `\n> Available commands:`
+          output.innerHTML += `\n> login <username> <password> - Login to the system`;
+          output.innerHTML += `\n> clear - Clear the terminal`;
+          output.innerHTML += `\n> help - Show this help message`;
+          output.innerHTML += `\n> echo <text> - Print the text`;
+
+          if (localStorage.getItem('loggedIn') === 'true') {
+            output.innerHTML += `\n> logout - Logout from the system`;
+            output.innerHTML += `\n> whoami - Show the current user`;
+          }
+        } else if (cmd === 'logout') {
+          if (localStorage.getItem('loggedIn') === 'false') {
+            output.innerHTML += `\n> You are not logged in!`;
+            return;
+          }
+
+          output.innerHTML += `\n> Logout successful!`;
+
+          localStorage.setItem('loggedIn', false);
+          localStorage.removeItem('username');
+        } else if (cmd === 'whoami') {
+          const username = localStorage.getItem('username');
+          output.innerHTML += `\n> ${username || 'guest'}`;
+        } else if ( cmd === 'echo') {
+          output.innerHTML += `\n> ${args.join(' ')}`;
+        } else if (cmd === '') {
+          output.innerHTML += '';
+        } else {
+          output.innerHTML += `\n> Command not found: ${cmd}`;
+        }
+      }
+
+      function login(username, password) {
+        // Simulating an API call
+        fetch('/dt/api/users.json', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          // check if username and password are in the response array
+          if (!data.find(user => user.username === username && user.password === password)) {
+            output.innerHTML += `\n> Login failed!`;
+            localStorage.setItem('loggedIn', false);
+            localStorage.removeItem('username');
+            return;
+          }
+
+          output.innerHTML += `\n> Login successful!`;
+          localStorage.setItem('loggedIn', true);
+          localStorage.setItem('username', username);
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

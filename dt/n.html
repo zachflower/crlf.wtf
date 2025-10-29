@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CRLF.WTF - DEVTOOLS NETWORK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.geocities.css">
+</head>
+
+<body>
+  <div class="content">
+    <h1>WELCOME!!!!!!!</h1>
+    <p>
+      Welcome to my super secret website! Please login to continue.
+    </p>
+    <p>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </p>
+    <p id="result"></p>
+    <img src="/images/underconstruction.gif" alt="Under Construction">
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simulating an API call
+      fetch('/dt/api/users.json', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (!data.find(user => user.username === username && user.password === password)) {
+            document.getElementById('result').innerText = 'Login failed! Nice try, loser!';
+            document.getElementById('result').style.color = 'red';
+            console.log("Unsuccessful login attempt, username: " + username + ", password: " + password);
+            return;
+          }
+
+          document.getElementById('result').innerText = 'Login successful! Welcome back, ' + username + '!';
+          document.getElementById('result').style.color = 'green';
+          console.log("Successful login, username: " + username + ", password: " + password);
+        });
+    }
+  </script>
+</body>
+
+</html>

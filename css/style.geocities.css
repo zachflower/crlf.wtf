@@ -1,0 +1,64 @@
+body {
+  background: #ffcc99;
+  color: #000000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 14pt;
+  text-align: center;
+  padding: 20px;
+}
+
+.content {
+  border: 5px solid #ff00ff;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 10px 10px 0 #ff00ff;
+}
+
+h1 {
+  font-size: 24pt;
+  color: #ff00ff;
+  text-shadow: 2px 2px #00ff00;
+  margin-bottom: 20px;
+}
+
+h1+p {
+  background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff00ff, #ff0080);
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  background: #ffffcc;
+  color: #000000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 14pt;
+  border: 2px solid #ff00ff;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+button {
+  background: #ff00ff;
+  color: #ffffff;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 14pt;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff66ff;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 14pt;
+}
+
+img {
+  margin-top: 20px;
+  width: 300px;
+  height: auto;
+}
