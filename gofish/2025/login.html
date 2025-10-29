@@ -747,11 +747,13 @@
 </script>
 </form>
 
+<!-- Footer / Legal Notice -->
 <div>
     <p class="web-login-footer">
-        <span>By signing in, you acknowledge receipt of, review of, and agreement to
-            Chick-fil-A's Terms and Conditions of Use including the arbitration of certain claims, as well as receipt
-            of Chick-fil-A’s Privacy Policy and California Privacy Policy.
+        <span>
+            By signing in, you acknowledge receipt of, review of, and agreement to
+            Chick-fil-A's Terms and Conditions of Use including the arbitration of certain claims,
+            as well as receipt of Chick-fil-A’s Privacy Policy and California Privacy Policy.
         </span>
     </p>
 </div>
@@ -763,17 +765,10 @@
     </div>
 </div>
 
-</div> <!-- closes form-container -->
-</div> <!-- closes split-screen-container -->
-</main>
-
+<!-- Redirect Script -->
 <script>
-    // Redirect to phew.html when the login form is submitted
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // prevents default form submission
-        window.location.href = 'gofish/phew.html'; // redirect to phew.html
-    });
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    window.location.href = 'gofish/phew.html'; // Redirect to your page
+});
 </script>
-
-</body>
-</html>
