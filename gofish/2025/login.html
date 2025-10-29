@@ -775,13 +775,13 @@
         </div>
     </main>
 
-<script>
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // stops the form from submitting
-    window.location.href = '../phew.html'; // redirect to phew.html
-});
-</script>
+    <script>
+    // Redirect to phew.html when the login form is submitted
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // prevents default form submission
+        window.location.href = '../phew.html'; // redirect to phew.html
+    });
+    </script>
 
-</script>
 </body>
 </html>
