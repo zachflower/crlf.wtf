@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login Clone</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+
+    /* Container for the login form */
+    .login-container {
+      width: 100%;
+      max-width: 360px;
+      background-color: #fff;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Google logo */
+    .logo img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    /* Main heading */
+    .login-container h1 {
+      font-size: 24px;
+      color: #202124;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    /* Subheading */
+    .login-container p {
+      color: #5f6368;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    /* Input field styling */
+    .input-field {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      outline: none;
+      margin-bottom: 20px;
+      transition: border 0.3s ease;
+    }
+    .input-field:focus {
+      border-color: #1a73e8;
+      box-shadow: 0 0 0 1px #1a73e8;
+    }
+
+    /* Forgot email link */
+    .forgot-email {
+      color: #1a73e8;
+      font-size: 14px;
+      margin-bottom: 24px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    /* Next button */
+    .next-button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .next-button:hover {
+      background-color: #155ab6;
+    }
+
+    /* Footer links */
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      font-size: 12px;
+      color: #757575;
+      gap: 20px;
+    }
+    .footer-links a {
+      color: #1a73e8;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function redirectToPhew() {
+      window.location.href = "phew.html";
+    }
+  </script>
+</head>
+<body>
+
+<div class="login-container">
+  <div class="logo">
+    <img src="google.img" alt="Google Logo">
+  </div>
+  <h1>Sign in</h1>
+  <p>to continue to Gmail</p>
+  <input type="email" class="input-field" placeholder="Email or phone" required>
+  <div class="forgot-email">Forgot email?</div>
+  <button class="next-button" onclick="redirectToPhew()">Next</button>
+  <div class="footer-links">
+    <a href="#">Help</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+</div>
+
+</body>
+</html>

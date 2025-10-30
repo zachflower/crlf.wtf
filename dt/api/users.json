@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "username": "tanderson",
+    "password": "redpill"
+  },
+  {
+    "id": 2,
+    "username": "ealderson",
+    "password": "fsociety"
+  },
+  {
+    "id": 3,
+    "username": "dmurphy",
+    "password": "god"
+  },
+  {
+    "id": 4,
+    "username": "abennett",
+    "password": "gatekeeper"
+  },
+  {
+    "id": 5,
+    "username": "sjobson",
+    "password": "swordfish"
+  },
+  {
+    "id": 6,
+    "username": "lsalander",
+    "password": "wasp"
+  },
+  {
+    "id": 7,
+    "username": "hprotagonist",
+    "password": "metaverse"
+  },
+  {
+    "id": 8,
+    "username": "kflynn",
+    "password": "lightcycle"
+  },
+  {
+    "id": 9,
+    "username": "dlightman",
+    "password": "joshua"
+  },
+  {
+    "id": 10,
+    "username": "bgrishenko",
+    "movie": "GoldenEye",
+    "password": "invincible"
+  },
+  {
+    "id": 11,
+    "username": "ebelford",
+    "password": "cookie"
+  },
+  {
+    "id": 12,
+    "username": "dnedry",
+    "password": "dodgson"
+  }
+]

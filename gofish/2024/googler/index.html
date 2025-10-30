@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .logo {
+            align-self: flex-start;
+        }
+        .logo img {
+            width: 48px;
+            height: 48px;
+        }
+        .header-text {
+            text-align: left;
+        }
+        .header-text h1 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #202124;
+            margin: 0;
+        }
+        .header-text p {
+            font-size: 16px;
+            color: #5f6368;
+            margin: 5px 0 0;
+        }
+        .input-container {
+            width: auto;
+            align-self: stretch;
+            margin-bottom: 10px;
+        }
+        .input-container input {
+            width: calc(100% - 24px);
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            color: #202124;
+            transition: border-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
+        }
+        .input-container input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-width: 2px;
+        }
+        .forgot-link {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            color: #1a73e8;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+        .help-text {
+            font-size: 12px;
+            color: #5f6368;
+            margin: 20px 0;
+        }
+        .help-text a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .help-text a:hover {
+            text-decoration: underline;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .actions a {
+            font-size: 14px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .actions a:hover {
+            text-decoration: underline;
+        }
+        .next-button {
+            background-color: #1a73e8;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .next-button:hover {
+            background-color: #1669c1;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #5f6368;
+        }
+        .footer a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        /**
+         * Redirects to the password page if the username is valid.
+         * Stores the username in localStorage for use on the next page.
+         * Validates the input to ensure it is either a 10-digit phone number or a valid email address.
+         */
+        function goToPasswordPage() {
+            const username = document.getElementById('username').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex pattern for email validation
+            const phonePattern = /^\d{10}$/; // Regex pattern for 10-digit phone number validation
+            
+            // Check if the input matches either the email or phone pattern
+            if (emailPattern.test(username) || phonePattern.test(username)) {
+                // Store the username in localStorage (Note: Avoid storing sensitive information in localStorage for security reasons)
+                localStorage.setItem('username', username);
+                // Redirect to the password page
+                window.location.href = 'Password.html';
+            } else {
+                // Alert user if the input is invalid
+                alert('Please enter a valid email address or a 10-digit phone number.');
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="header">
+            <div class="logo">
+                <img src="GoogleG.png" alt="Google G Logo">
+            </div>
+            <div class="header-text">
+                <h1>Sign in</h1>
+                <br>
+                <p>Use your Google Account</p>
+            </div>
+        </div>
+       
+        <div class="input-container">
+            <input type="text" id="username" placeholder="Email or phone"> <!-- Input field for email or phone number -->
+        </div>
+       
+        <a href="#" class="forgot-link">Forgot email?</a> <!-- Link for forgetting email -->
+       
+        <br>
+       
+        <div class="actions">
+            <a href="#">Create account</a> <!-- Link to create a new account -->
+            <button class="next-button" onclick="goToPasswordPage()">Next</button> <!-- Button to proceed to the password page -->
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="Google_2015_logo.svg" alt="Google Logo">
+            </div>
+            <h1>Sign in</h1>
+            <p>Use your Google Account</p>
+            
+            <!-- Email Form -->
+            <form id="emailForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Email or phone" id="email" required>
+                </div>
+                <div class="links">
+                    <a href="#">Forgot email?</a>
+                </div>
+                <!-- <p class="guest-mode">
+                    Not your computer? Use Guest mode to sign in privately. 
+                    <a href="phew.html">Learn more about using Guest mode</a>
+                </p> -->
+                <div class="actions">
+                    <a href="#" class="create-account">Create account</a>
+                    <button type="submit" class="next-button">Next</button>
+                </div>
+            </form>
+
+            <!-- Password Form (Hidden initially) -->
+            <form id="passwordForm" style="display: none;">
+                <div class="input-group">
+                    <input type="password" placeholder="Enter your password" id="password" required>
+                </div>
+                <!-- Show Password Checkbox with Padding -->
+                <div class="show-password" style="display: flex; align-items: center; padding-top: 15px;">
+                    <input type="checkbox" id="showPassword">
+                    <label for="showPassword" style="margin-left: 8px;">Show password</label>
+                </div>
+                <div class="actions">
+                    <a href="#" class="create-account">Try another way</a>
+                    <button type="submit" class="next-button">Next</button>
+                </div>
+            </form>
+        </div>
+        
+        <footer>
+            <a href="phew.html">Help</a>
+            <a href="phew.html">Privacy</a>
+            <a href="phew.html">Terms</a>
+        </footer>
+    </div>
+
+    <script>
+        // Handle the email form submission
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents actual form submission
+            
+            // Hide the email form and show the password form
+            document.getElementById('emailForm').style.display = 'none';
+            document.getElementById('passwordForm').style.display = 'block';
+        });
+
+        // Handle the password form submission
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents actual form submission
+            
+            // Redirects to awareness page without sending any data
+            window.location.href = 'phew.html';
+        });
+
+        // Toggle password visibility
+        document.getElementById('showPassword').addEventListener('change', function() {
+            const passwordField = document.getElementById('password');
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>

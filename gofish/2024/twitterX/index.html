@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Login to X</title>
+</head>
+
+<body>
+    <header class="header">
+        <button style="background-color: rgba(0,0,0,0); border-width: 0px;color: white; font-size: xx-large;"
+            type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <img  src="img/logo.png" alt="X Logo" class="logo">
+    </header>
+    <main class="login-container">
+        <h2>Sign in to X</h2>
+        <button type="submit" class="buttons" onclick="redirectto()"><img style="width: 17px; margin-right: 5px;" src="img/google_logo.png" alt="google">Sign in with Google</button>
+        <button type="submit" class="buttons" onclick="redirectto()"><img style="width: 13px; margin-right: 5px;" src="img/apple_logo.png" alt="apple">Sign in with Apple</button>
+        <div class="divider">
+            <div class="line"></div>
+            <span class="or-text">or</span>
+            <div class="line"></div>
+        </div>
+        <input class="email" type="text" placeholder="Phone, email, or username">
+        <button type="submit" class="next-button" onclick="redirectto()">Next</button>
+        <br>
+        <button class="forgor">Forgot password?</button>
+        <div class="links">
+            <span style="color: gray;">Don't have an account?</span> <a href="#">Sign up</a>
+        </div>
+    </main>
+<script>
+    function redirectto() {
+        location.href = "phew.html"
+    }
+</script>
+</body>
+
+</html>

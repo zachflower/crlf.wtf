@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - DoorDash</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .login-box img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .login-box h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 24px 0;
+        }
+
+        .login-box input[type="email"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .login-box input:focus {
+            border-color: #ff3008;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background-color: #ff3008;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+
+        .login-box button:hover {
+            background-color: #d92607;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .redirect {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .redirect a {
+            color: #ff3008;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .redirect a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <img src="Door-Dash-Logo-PNG-Cutout.png" alt="DoorDash Logo">
+        
+        <h1>Log In</h1>
+
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button onclick="logIn()">Sign In</button>
+
+        <div class="redirect">
+            Don’t have an account? <a href="signup.html">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        function logIn() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email && password) {
+                window.location.href = "phew.html";
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+
+</body>
+</html>
