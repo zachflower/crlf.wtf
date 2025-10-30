@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in – Google Accounts</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #202124;
+      color: #e8eaed;
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      border-radius: 20px;
+      width: 950px;
+      max-width: 95%;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .left-section {
+      flex: 1;
+      margin-right: 60px;
+    }
+
+    .left-section img {
+      width: 45px;
+      margin-bottom: 0;
+    }
+
+    .left-section h1 {
+      font-size: 42px;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+    }
+
+    .left-section p {
+      font-size: 18px;
+      color: #9aa0a6;
+      margin: 0;
+    }
+
+    .login-box {
+      flex: 1;
+      background-color: #000000;
+      padding: 80px;
+      border-radius: 16px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .login-box.hidden {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transform: translateY(20px);
+    }
+
+    .login-box.active {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+      position: relative;
+    }
+
+    .login-box h2 {
+      font-weight: 400;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .login-box p {
+      color: #9aa0a6;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #5f6368;
+      border-radius: 4px;
+      background-color: transparent;
+      color: #e8eaed;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #8ab4f8;
+    }
+
+    .forgot {
+      margin-top: 10px;
+    }
+
+    .forgot a {
+      color: #8ab4f8;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom-text {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #9aa0a6;
+    }
+
+    .bottom-text a {
+      color: #8ab4f8;
+      text-decoration: none;
+    }
+
+    .bottom-text a:hover {
+      text-decoration: underline;
+    }
+
+    .bottom-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bottom-links a {
+      color: #8ab4f8;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+
+    .next-btn {
+      background-color: #8ab4f8;
+      color: #202124;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background-color: #a8c7fa;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      color: #9aa0a6;
+      font-size: 13px;
+      width: 100%;
+      text-align: center;
+    }
+
+    footer a {
+      color: #9aa0a6;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+      }
+
+      .left-section {
+        margin-right: 0;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .login-box {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <img src="Google.png" alt="Google Logo">
+      <h1 id="left-title">Sign in</h1>
+      <p>Use your Google Account</p>
+    </div>
+
+    <!-- Step 1: Email/Phone -->
+    <div class="login-box active" id="email-step">
+      <input type="text" id="email-input" placeholder="Email or phone" />
+      <div class="forgot"><a href="#">Forgot email?</a></div>
+
+      <div class="bottom-text">
+        Not your computer? Use a Private Window to sign in.
+        <a href="#">Learn more</a>
+      </div>
+
+      <div class="bottom-links">
+        <a href="#">Create account</a>
+        <button class="next-btn" id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Password -->
+    <div class="login-box hidden" id="password-step">
+      <input type="password" id="password-input" placeholder="Enter your password" />
+      <div class="forgot"><a href="#">Forgot password?</a></div>
+
+      <div class="bottom-links">
+        <a href="#" id="back-btn">Back</a>
+        <button class="next-btn" id="login-btn">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>English (United States)</span>
+    <a href="#">Help</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </footer>
+
+  <script>
+    const emailStep = document.getElementById('email-step');
+    const passwordStep = document.getElementById('password-step');
+    const nextBtn = document.getElementById('next-btn');
+    const backBtn = document.getElementById('back-btn');
+    const loginBtn = document.getElementById('login-btn');
+    const leftTitle = document.getElementById('left-title');
+
+    nextBtn.addEventListener('click', () => {
+      emailStep.classList.remove('active');
+      emailStep.classList.add('hidden');
+      passwordStep.classList.remove('hidden');
+      passwordStep.classList.add('active');
+      leftTitle.textContent = 'Welcome';
+    });
+
+    backBtn.addEventListener('click', () => {
+      passwordStep.classList.remove('active');
+      passwordStep.classList.add('hidden');
+      emailStep.classList.remove('hidden');
+      emailStep.classList.add('active');
+      leftTitle.textContent = 'Sign in';
+    });
+
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = './phew.html';
+    });
+  </script>
+</body>
+</html>
